@@ -1,13 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-evenly;
+  display: flex;
+  background-color: #ededed;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0 , 0 , 0.7);
 }
 
 .nav {
   list-style-type: none;
-  width: 500px;
+  width: 700px;
   display: flex;
   justify-content: space-evenly;
 }
-

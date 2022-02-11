@@ -1,6 +1,6 @@
 .div-login {
-    width: 200px;
-    height: 300px;
+    width: 800px;
+    height: 620px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -13,10 +13,19 @@
 }
 
 .div-login-logo {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     align-self: center;
 }
+
+/* .div-login-input {
+    display: group;
+    align-items: center;
+    justify-content: row;
+    height: 500px;
+    width: 500px;
+    align-self: center;
+} */
 
 input {
     width: 95%;

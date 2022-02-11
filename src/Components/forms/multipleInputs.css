@@ -1,6 +1,6 @@
 .div-login {
-    width: 200px;
-    height: 300px;
+    width: 500px;
+    height: 620px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

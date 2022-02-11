@@ -28,9 +28,11 @@ class Login extends React.Component {
                 </div>
                 <div>
                     <form onSubmit>  {this.handleSubmit}
+                    <div className = 'div-login-input'>
                         <input type = 'email' name = 'email' placeholder = 'email....' required onChange={this.handleChange}/>
                         <input type = 'password' name = 'pwd' placeholder = 'password....' required onChange = {this.handleChange}/>
                         <button onSubmit = {this.handleSubmit}> Log In </button>
+                    </div>
                     </form>
                     <Link to="/multipleInputs" variant = "body2">
                         Not have an account ? Sign up here 

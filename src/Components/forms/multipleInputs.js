@@ -84,6 +84,11 @@ const MultipleInputs = () => {
         <button type="submit"> Registration </button>
         </div>
       </form>
+      <div>
+      <Link to="/Login" variant = "body2">
+        Already have an account? Login
+        </Link>
+      </div>
         <div>
         {
           records.map((curElem) => {
@@ -98,10 +103,6 @@ const MultipleInputs = () => {
           );
         })}
         </div>
-        <Link to="/Login" variant = "body2">
-        Already have an account? Login
-        </Link>
-      
       </div>
     </>
 )
