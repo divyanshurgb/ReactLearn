@@ -1,32 +1,20 @@
-.login-box{
-    width: 800px;
-    height: 500px;
+.register-logo {
+
+}
+
+.login-box {
+    width: 500px;
+    height: 620px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 0 auto;
     border: 1px sold #dbdbdb;
     border-radius: 5px;
     padding: 20px;
-    margin-top: 5vh;
+    margin-top: 10vh;
     background-color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    background: rgba(0,0,0,.2);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
 }
-
-.login-logo {
-    height: 100px;
-    width: 100px;
-    align-self: center;
-}
-
 
 .login-box h2 {
     margin: 0 0 30px;
@@ -67,8 +55,8 @@
     left: 0;
     color: #03e9f4;
     font-size: 12px;
-  }
-   
+   }
+    
   .login-box form a {
     position: relative;
     display: inline-block;
@@ -172,7 +160,8 @@
       bottom: 100%;
     }
   }
-  
+
+
 input {
     width: 95%;
     border: 1px solid #dbdbdb;
@@ -195,4 +184,3 @@ button {
     color: white;
     border-radius: 5px;
 }
-

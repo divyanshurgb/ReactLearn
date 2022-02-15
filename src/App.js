@@ -8,16 +8,27 @@ import Profile from './Pages/Profile'
 import NotFound from './Pages/NotFound'
 import Navbar from './Components/NavBar'
 import Login from "./Components/Login/Login"
-import MultipleInputs from "./Components/forms/multipleInputs"
+import MultipleInputs from "./Components/forms/register"
 
-function App() {
+const themes = {
+  light: {
+    foreground: "#000000",
+    background: "#eeeeee"
+  },
+  dark: {
+    foreground: "#ffffff",
+    background: "#222222"
+  }
+};
+
+
+const App = () => {
   const [login, setLogin] = useState(false);
-
+  
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar/> 
-        {/* Routing */}
           <Switch>
             <Route exact path = '/' component = { Login } />
             <Route path = '/about' component = { About }/>
@@ -26,8 +37,8 @@ function App() {
             <Route path = "/multipleInputs" component = { MultipleInputs } />
             <Route component = {NotFound} />
           </Switch>
-  </BrowserRouter>
-  </div>
+      </BrowserRouter>
+    </div>
 
   );
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import { ReactComponent as Logo } from '../../assets/icons8-instagram.svg'
 import './Login.css';
 import {Link} from 'react-router-dom';
-
     
 class Login extends React.Component {
     
@@ -22,9 +21,9 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className = 'div-login'> 
-                <div className = 'div-login-logo'>
-                    <Logo />
+            <div className = 'login-box'> 
+                <div className = 'login-logo'>
+                <Logo />
                 </div>
                 <div>
                     <form onSubmit>  {this.handleSubmit}
@@ -38,13 +37,9 @@ class Login extends React.Component {
                         Not have an account ? Sign up here 
                     </Link>
                 </div>
-                <div>
-                    
-                </div>
             </div>
         )
     }
 }
-
 
 export default Login;
