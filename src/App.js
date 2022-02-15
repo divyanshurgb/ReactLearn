@@ -10,18 +10,6 @@ import Navbar from './Components/NavBar'
 import Login from "./Components/Login/Login"
 import MultipleInputs from "./Components/forms/register"
 
-const themes = {
-  light: {
-    foreground: "#000000",
-    background: "#eeeeee"
-  },
-  dark: {
-    foreground: "#ffffff",
-    background: "#222222"
-  }
-};
-
-
 const App = () => {
   const [login, setLogin] = useState(false);
   

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactComponent as Logo } from '../../assets/icons8-instagram.svg'
 import './Login.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
     
 class Login extends React.Component {
     
