@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ReactComponent as Logo } from '../../assets/icons8-instagram.svg'
 import './Login.css';
 import { Link } from 'react-router-dom';
@@ -33,7 +33,7 @@ class Login extends React.Component {
                         <button onSubmit = {this.handleSubmit}> Log In </button>
                     </div>
                     </form>
-                    <Link to="/multipleInputs" variant = "body2">
+                    <Link to="/register" variant = "body2">
                         Not have an account ? Sign up here 
                     </Link>
                 </div>

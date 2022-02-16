@@ -1,4 +1,4 @@
-import { useState, createContext, useContext } from "react";
+import { useContext } from "react";
 import UserContext from "./UserContext";
 
 const Profile5 = () => {

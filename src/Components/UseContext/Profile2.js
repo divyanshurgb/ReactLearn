@@ -1,5 +1,5 @@
-import Profile3 from './Profile3';
 import { useState } from "react";
+import Profile3 from './Profile3';
 
 const Profile2 = () => {
   return (

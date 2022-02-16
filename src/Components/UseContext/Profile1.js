@@ -1,7 +1,6 @@
-import Profile2 from './Profile2';
-import { useState, createContext, useContext } from "react";
+import { useState } from "react";
 import UserContext from "./UserContext";
-import ReactDOM from "react-dom";
+import Profile2 from './Profile2';
 
 function Profile1() {
   const [user, setUser] = useState("Divyanshu Singh");
