@@ -21,7 +21,7 @@ const App = () => {
           <Switch>
             <Route exact path = '/' component = { Login } />
             <Route path = '/about' component = { About }/>
-            <Route path = '/profile1' component = { Profile1 }/>
+            <Route path = '/profile' component = { Profile }/>
             <Route path = '/login' component = { Login }/>
             <Route path = "/multipleInputs" component = { MultipleInputs } />
             <Route component = {NotFound} />

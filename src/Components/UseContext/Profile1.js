@@ -1,6 +1,6 @@
 import Profile2 from './Profile2';
 import { useState, createContext, useContext } from "react";
-import UserContext from "../../Pages/UserContext";
+import UserContext from "./UserContext";
 import ReactDOM from "react-dom";
 
 function Profile1() {
@@ -8,7 +8,7 @@ function Profile1() {
 
   return (
     <UserContext.Provider value={user}>
-      <h1>{`Hello ${user}!`}</h1>
+      <h1>{`Hello ${user}`}</h1>
       <Profile2 user={user} />
     </UserContext.Provider>
   );
