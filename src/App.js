@@ -7,20 +7,16 @@ import About from './Pages/About'
 import Profile from './Pages/Profile'
 import NotFound from './Pages/NotFound'
 import Navbar from './Components/NavBar'
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';  
-import Typography from '@material-ui/core/Typography';
 import Login from "./Components/Login/Login"
-import MultipleInputs from "./Components/forms/multipleInputs"
+import MultipleInputs from "./Components/forms/register"
 
-function App() {
+const App = () => {
   const [login, setLogin] = useState(false);
-
+  
   return (
-  <BrowserRouter>
-      <div className="App"  style={{ marginLeft: '40%', marginTop: '60px', width: '30%'}} >
+    <div className="App">
+      <BrowserRouter>
         <Navbar/> 
-        {/* Routing */}
           <Switch>
             <Route exact path = '/' component = { Login } />
             <Route path = '/about' component = { About }/>
@@ -29,19 +25,9 @@ function App() {
             <Route path = "/multipleInputs" component = { MultipleInputs } />
             <Route component = {NotFound} />
           </Switch>
-          {/* Box and Container */}
-            <Box color="white" bgcolor="palevioletred" p={1}>
-                      Welcome to the app
-              <Container maxWidth="sm">
-                <Typography component="div" style={{ 
-                  backgroundColor: 'Orange', height: '100vh' 
-                  }}>
-                      Greetings from DIV!
-                </Typography>
-              </Container>
-            </Box> 
-      </div>
-  </BrowserRouter>
+      </BrowserRouter>
+    </div>
+
   );
 }
 

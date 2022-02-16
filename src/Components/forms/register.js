@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {Link} from 'react-router-dom';
-import './multipleInputs';
+import './register';
+// import { ReactComponent as Logo } from '../../assets/icons8-registration-64'
 
 const MultipleInputs = () => {
   const [userRegistration, setUserRegistration] = useState({
@@ -33,7 +34,9 @@ const MultipleInputs = () => {
 
   return (
     <>
-      <div className="div-login">
+      <div className="login-box">
+      <div className = "register-logo">
+        {/* <Logo /> */}
       <form action="" onSubmit={handleSubmit}>
         <div>
         <div>
@@ -84,6 +87,11 @@ const MultipleInputs = () => {
         <button type="submit"> Registration </button>
         </div>
       </form>
+      <div>
+      <Link to="/Login" variant = "body2">
+        Already have an account? Login
+        </Link>
+      </div>
         <div>
         {
           records.map((curElem) => {
@@ -98,10 +106,7 @@ const MultipleInputs = () => {
           );
         })}
         </div>
-        <Link to="/Login" variant = "body2">
-        Already have an account? Login
-        </Link>
-      
+        </div>
       </div>
     </>
 )
