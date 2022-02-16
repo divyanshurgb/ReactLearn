@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar variant="dense">
+      <Toolbar variant="dense" style={styles.menuCss}>
           <IconButton edge="start" 
             className={classes.menuButton} 
             color="inherit" aria-label="menu">
@@ -41,4 +41,13 @@ export default function Navbar() {
       </AppBar>
     </div>
   );
+}
+
+const styles = {
+  menuCss: {
+     minHeight: '48px',
+      position: 'absolute',
+      left: '24%',
+      top: '13px'
+  },
 }
