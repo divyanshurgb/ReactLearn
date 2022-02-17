@@ -14,7 +14,10 @@ const Header = () => {
         <li>
             <Link to = '/profile'> Profile </Link>
         </li>
+<<<<<<< HEAD
         
+=======
+>>>>>>> main
     </ul>
         </>
     )
