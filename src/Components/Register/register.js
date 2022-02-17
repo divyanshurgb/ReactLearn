@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './register';
+// import { ReactComponent as Logo } from '../../assets/icons8-registration-64'
 
 const MultipleInputs = () => {
-    const [userRegistration, setUserRegistration] = useState({
+  const [userRegistration, setUserRegistration] = useState({
     username: "",
     email: "",
     phone: "",
@@ -11,7 +12,7 @@ const MultipleInputs = () => {
   });
   
   const [records, setRecords] = useState([]);
-  
+
   const handleInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -34,7 +35,7 @@ const MultipleInputs = () => {
   return (
     <>
       <div className="login-box">
-      <div className = "login-logo">
+      <div className = "register-logo">
         {/* <Logo /> */}
       <form action="" onSubmit={handleSubmit}>
         <div>
