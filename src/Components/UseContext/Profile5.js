@@ -7,7 +7,7 @@ const Profile5 = () => {
   return (
     <>
         <h1>Profile 5</h1>
-        <h2>{`Hello ${user} `}</h2>
+        <h2>{`Hello ${user} again`}</h2>
     </>
   )
 }
