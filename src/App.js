@@ -8,7 +8,8 @@ import Profile from './Pages/Profile'
 import NotFound from './Pages/NotFound'
 import Navbar from './Components/NavBar'
 import Login from "./Components/Login/Login"
-import MultipleInputs from "./Components/forms/register"
+import MultipleInputs from "./Components/Register/register"
+import Profile1 from "./Components/UseContext/Profile1";
 
 const App = () => {
   const [login, setLogin] = useState(false);
@@ -27,7 +28,6 @@ const App = () => {
           </Switch>
       </BrowserRouter>
     </div>
-
   );
 }
 
