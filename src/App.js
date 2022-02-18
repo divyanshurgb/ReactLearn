@@ -10,6 +10,9 @@ import Navbar from './Components/NavBar'
 import Login from "./Components/Login/Login"
 import MultipleInputs from "./Components/Register/register"
 import Profile1 from "./Components/UseContext/Profile1";
+import Create from './Components/CRUD/create/create';
+import Read from './Components/CRUD/read/read';
+import Update from './Components/CRUD/update/update';
 
 const App = () => {
   const [login, setLogin] = useState(false);
@@ -25,6 +28,17 @@ const App = () => {
             <Route path = '/login' component = { Login }/>
             <Route path = "/multipleInputs" component = { MultipleInputs } />
             <Route component = {NotFound} />
+        <div>
+          <Route path='/' component={Create} />
+        </div>
+
+        <div style={{ marginTop: 20 }}>
+          <Route path='/read' component={Read} />
+        </div>
+        <div>
+        <Route path='/update' component={Update} />  
+
+        </div>
           </Switch>
       </BrowserRouter>
     </div>
