@@ -1,9 +1,8 @@
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Header = () => {
     return ( 
     <>
-    {/* <h1> React Router Tutorial </h1> */}
     <ul className="nav">
         <li>
             <Link to = '/'> Home </Link>
@@ -14,7 +13,16 @@ const Header = () => {
         <li>
             <Link to = '/profile'> Profile </Link>
         </li>
-        
+        <li>
+            <Link to = '/Create'> Create </Link>
+        </li>
+        <li>
+            <Link to = '/Read'> Read </Link>
+        </li>
+        <li>
+            <Link to = '/Update'> Update </Link>
+        </li>
+
     </ul>
         </>
     )
