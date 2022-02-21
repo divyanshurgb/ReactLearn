@@ -27,6 +27,7 @@ export default function Update() {
             history.push('/read')
         })
     }
+    
     return (
         <div>
             <Form className="login-box">

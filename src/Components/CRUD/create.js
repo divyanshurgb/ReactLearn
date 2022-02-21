@@ -5,7 +5,6 @@ import { useHistory } from 'react-router-dom';
 import AddBox from '@material-ui/icons/AddBox';
 // import Check from '@material-ui/icons/Check';
 
-
 export default function Create() {
     let history = useHistory();
     const [firstName, setFirstName] = useState('');
@@ -41,7 +40,6 @@ export default function Create() {
                     <Checkbox label = 'check yes if you agree to terms and conditions' onChange={(e) => setCheckbox(!checkbox)}/>
                 </Form.Field>
                 </div>
-                {/* <Check /> */}
                 <Button onClick={postData} type='submit'>Submit</Button>
             </Form>
         </div>

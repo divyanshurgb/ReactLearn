@@ -4,6 +4,7 @@ import { Table, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
 import ViewColumn from '@material-ui/icons/ViewColumn';
+import "././CRUD.css";
 
 export default function Read() {
     const [APIData, setAPIData] = useState([]);
@@ -38,24 +39,19 @@ export default function Read() {
     }
 
     return (
-        <div >
             <div>
             <Table singleLine className="login-box1">
-                <div className="add-box"> 
-                <h2> 
-                <ArrowDownward />
+                <div className = "css-read">
                 <ViewColumn /> 
-                </h2>
+                <ArrowDownward />
                 </div>
                 <Table.Header>
                     <Table.Row>
-                        <div classname = "css-table">
-                        <Table.HeaderCell> First Name </Table.HeaderCell>
-                        <Table.HeaderCell>Last Name </Table.HeaderCell>
+                        <Table.HeaderCell>First Name</Table.HeaderCell>
+                        <Table.HeaderCell>Last Name</Table.HeaderCell>
                         <Table.HeaderCell>Checkbox Value</Table.HeaderCell>
                         <Table.HeaderCell>Update</Table.HeaderCell>
                         <Table.HeaderCell>Delete</Table.HeaderCell>
-                        </div>
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>
@@ -78,7 +74,6 @@ export default function Read() {
                     })}
                 </Table.Body>
                 </Table>
-        </div>
         </div>
     )
 }
