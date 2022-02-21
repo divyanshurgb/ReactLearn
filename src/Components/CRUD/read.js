@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import ArrowDownward from '@material-ui/icons/ArrowDownward';
+import ViewColumn from '@material-ui/icons/ViewColumn';
 
 export default function Read() {
     const [APIData, setAPIData] = useState([]);
@@ -39,13 +41,21 @@ export default function Read() {
         <div >
             <div>
             <Table singleLine className="login-box1">
+                <div className="add-box"> 
+                <h2> 
+                <ArrowDownward />
+                <ViewColumn /> 
+                </h2>
+                </div>
                 <Table.Header>
                     <Table.Row>
-                        <Table.HeaderCell>First Name</Table.HeaderCell>
-                        <Table.HeaderCell>Last Name</Table.HeaderCell>
+                        <div classname = "css-table">
+                        <Table.HeaderCell> First Name </Table.HeaderCell>
+                        <Table.HeaderCell>Last Name </Table.HeaderCell>
                         <Table.HeaderCell>Checkbox Value</Table.HeaderCell>
                         <Table.HeaderCell>Update</Table.HeaderCell>
                         <Table.HeaderCell>Delete</Table.HeaderCell>
+                        </div>
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>

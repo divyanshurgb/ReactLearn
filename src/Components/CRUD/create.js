@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import AddBox from '@material-ui/icons/AddBox';
+// import Check from '@material-ui/icons/Check';
+
 
 export default function Create() {
     let history = useHistory();
@@ -22,6 +25,9 @@ export default function Create() {
     return (
         <div>
             <Form className="login-box">
+                <div className="add-box"> 
+                <h2> <AddBox />  Add more Users </h2>
+                </div>
                 <Form.Field>
                     <label>First Name</label>
                     <input placeholder='First Name' onChange={(e) => setFirstName(e.target.value)}/>
@@ -30,9 +36,12 @@ export default function Create() {
                     <label>Last Name</label>
                     <input placeholder='Last Name' onChange={(e) => setLastName(e.target.value)}/>
                 </Form.Field>
-                <Form.Field className="create-css">
-                    <Checkbox label = 'I agree to terms and conditions' onChange={(e) => setCheckbox(!checkbox)}/>
+                <div className="css-form">
+                <Form.Field>
+                    <Checkbox label = 'check yes if you agree to terms and conditions' onChange={(e) => setCheckbox(!checkbox)}/>
                 </Form.Field>
+                </div>
+                {/* <Check /> */}
                 <Button onClick={postData} type='submit'>Submit</Button>
             </Form>
         </div>

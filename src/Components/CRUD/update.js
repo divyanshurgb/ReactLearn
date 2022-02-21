@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import Edit from '@material-ui/icons/Edit';
 
 export default function Update() {
     let history = useHistory();
@@ -29,6 +30,9 @@ export default function Update() {
     return (
         <div>
             <Form className="login-box">
+                <div className="add-box"> 
+                <h2> <Edit /> Edit the details </h2>
+                </div>
                 <Form.Field>
                     <label>First Name</label>
                     <input placeholder='First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
@@ -38,7 +42,7 @@ export default function Update() {
                     <input placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                    <Checkbox label='I agree to the Terms and Conditions' checked={checkbox} onChange={() => setCheckbox(!checkbox)}/>
+                    <Checkbox label='Check yes if you agree to terms and conditions' checked={checkbox} onChange={() => setCheckbox(!checkbox)}/>
                 </Form.Field>
                 <Button type='submit' onClick={updateAPIData}>Update</Button>
             </Form>

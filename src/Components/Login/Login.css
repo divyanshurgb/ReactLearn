@@ -21,6 +21,16 @@
     border-radius: 10px;
 }
 
+.css-table {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.add-box { 
+    display: inline-block;
+    justify-content: flex-start;
+}
+
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .main{
