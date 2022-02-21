@@ -28,7 +28,7 @@ export default function Update() {
     }
     return (
         <div>
-            <Form className="create-form">
+            <Form className="login-box">
                 <Form.Field>
                     <label>First Name</label>
                     <input placeholder='First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)}/>

@@ -36,8 +36,9 @@ export default function Read() {
     }
 
     return (
-        <div>
-            <Table singleLine>
+        <div >
+            <div>
+            <Table singleLine className="login-box1">
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>First Name</Table.HeaderCell>
@@ -47,7 +48,6 @@ export default function Read() {
                         <Table.HeaderCell>Delete</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
-
                 <Table.Body>
                     {APIData.map((data) => {
                         return (
@@ -67,7 +67,8 @@ export default function Read() {
                         )
                     })}
                 </Table.Body>
-            </Table>
+                </Table>
+        </div>
         </div>
     )
 }

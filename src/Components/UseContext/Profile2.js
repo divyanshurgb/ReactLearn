@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Profile3 from './Profile3';
 
 const Profile2 = () => {

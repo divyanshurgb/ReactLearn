@@ -14,15 +14,8 @@ const Header = () => {
             <Link to = '/profile'> Profile </Link>
         </li>
         <li>
-            <Link to = '/Create'> Create </Link>
+            <Link to = '/Create'> Registration Form </Link>
         </li>
-        <li>
-            <Link to = '/Read'> Read </Link>
-        </li>
-        <li>
-            <Link to = '/Update'> Update </Link>
-        </li>
-
     </ul>
         </>
     )
