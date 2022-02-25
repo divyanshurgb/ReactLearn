@@ -45,7 +45,7 @@ export default function Navbar() {
 
 const styles = {
   menuCss: {
-     minHeight: '48px',
+      minHeight: '48px',
       position: 'absolute',
       left: '24%',
       top: '13px'

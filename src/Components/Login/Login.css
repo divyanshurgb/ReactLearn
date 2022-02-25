@@ -26,26 +26,12 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .add-box { 
     display: inline-block;
     justify-content: flex-start;
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-.main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #212121;
-  color: whitesmoke;
-  flex-direction: column;
-}
-
-.main-header{
-  font-family: 'Montserrat', sans-serif;
-} */
 
 .create-form label{
   color: whitesmoke !important;
@@ -225,17 +211,5 @@ input {
     background-color: #fafafa;
     box-shadow: none;
     font-family: 'Open Sans Codensed', sans-serif;
-}
-
-button {
-    width: 100%;
-    margin: 5px 0;
-    background-color: dodgerblue;
-    font-family: 'Open Sans Codensed', 'sans-serif';
-    padding: 5px;
-    font-weight: 600;
-    border: none;
-    color: white;
-    border-radius: 5px;
 }
 

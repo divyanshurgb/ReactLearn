@@ -111,4 +111,5 @@ const MultipleInputs = () => {
     </>
 )
 }
+
 export default MultipleInputs;

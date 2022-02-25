@@ -1,37 +1,43 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Table, Button } from 'semantic-ui-react';
+import { Table } from 'semantic-ui-react';
+// import Table from '@mui/material/Table';
+import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
 import ViewColumn from '@material-ui/icons/ViewColumn';
 import "././CRUD.css";
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 
 export default function Read() {
-    const [APIData, setAPIData] = useState([]);
+    const [APIData, setAPIData] = useState([]);   // it stores the state of the API data
     useEffect(() => {
-        axios.get(`https://60fbca4591156a0017b4c8a7.mockapi.io/fakeData`)
-            .then((response) => {
+        axios.get(`https://60fbca4591156a0017b4c8a7.mockapi.io/fakeData`)  // it gets the data from the fake API
+            .then((response) => {                 // response is given by server to the API
                 console.log(response.data)
                 setAPIData(response.data);
             })
     }, []);
 
-    const setData = (data) => {
-        let { id, firstName, lastName, checkbox } = data;
-        localStorage.setItem('ID', id);
+    const setData = (data) => {                  // Function used to store the data 
+        let { id, firstName, lastName, checkbox } = data; 
+        localStorage.setItem('ID', id);          // It stores the Id in local storage
         localStorage.setItem('First Name', firstName);
         localStorage.setItem('Last Name', lastName);
         localStorage.setItem('Checkbox Value', checkbox)
     }
 
-    const getData = () => {
+    const getData = () => {                      // Function used to get the data
         axios.get(`https://60fbca4591156a0017b4c8a7.mockapi.io/fakeData`)
-            .then((getData) => {
+            .then((getData) => {                 
                 setAPIData(getData.data);
             })
     }
 
-    const onDelete = (id) => {
+    const onDelete = (id) => {                  // function used to delete the user
         axios.delete(`https://60fbca4591156a0017b4c8a7.mockapi.io/fakeData/${id}`)
         .then(() => {
             getData();
@@ -40,10 +46,16 @@ export default function Read() {
 
     return (
             <div>
-            <Table singleLine className="login-box1">
-                <div className = "css-read">
+            <Table>
+                <div>
                 <ViewColumn /> 
                 <ArrowDownward />
+                <Box />
+                <Grid container columns={{ xs: 4, md: 12 }}>
+  <Grid item xs={2} />
+</Grid>
+                <Card variant="outlined"/>
+                <Container maxWidth="sm" />
                 </div>
                 <Table.Header>
                     <Table.Row>
@@ -55,19 +67,19 @@ export default function Read() {
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>
-                    {APIData.map((data) => {
+                    {APIData.map((data) => {   // It maps the data through the table
                         return (
-                            <Table.Row>
-                                <Table.Cell>{data.firstName}</Table.Cell>
+                            <Table.Row> 
+                                <Table.Cell>{data.firstName}</Table.Cell>  
                                 <Table.Cell>{data.lastName}</Table.Cell>
                                 <Table.Cell>{data.checkbox ? 'Checked' : 'Unchecked'}</Table.Cell>
-                                <Link to='/update'>
+                                <Link to='/update/:id'>                      
                                     <Table.Cell> 
-                                        <Button onClick={() => setData(data)}>Update</Button>
+                                    <Button variant = "contained" color = "primary" onClick={() => onDelete(data.id)}> Edit </Button>
                                     </Table.Cell>
                                 </Link>
                                 <Table.Cell>
-                                    <Button onClick={() => onDelete(data.id)}>Delete</Button>
+                                    <Button variant = "contained" color = "primary" onClick={() => onDelete(data.id)}> Delete </Button>
                                 </Table.Cell>
                             </Table.Row>
                         )

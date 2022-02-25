@@ -9,6 +9,7 @@ import MultipleInputs from "./Components/Register/register"
 import Create from "./Components/CRUD/create"
 import Read from "./Components/CRUD/read"
 import Update from "./Components/CRUD/update"
+import Box from '@material-ui/core/Box'
 
 const App = () => {
   // const [login, setLogin] = useState(false);
@@ -19,21 +20,10 @@ const App = () => {
       <BrowserRouter>
         <Navbar/> 
           <Switch>
-          {/* <div className="main">
-            <h2 className="main-head">React Crud Operations</h2>
-          <div>
-            <Route exact path='/create' component={Create} />
-          </div>
-          <div style={{ marginTop: 20 }}>
-            <Route exact path='/read' component={Read} />
-          </div>
-
-            <Route path='/update' component={Update} />
-          </div> */}
             <Route exact path = '/' component = { Login } />
             <Route exact path='/create' component={ Create } />
             <Route exact path='/read' component={ Read } />
-            <Route path='/update' component={ Update } />
+            <Route path='/update/:id' component={ Update } />
             <Route path = '/about' component = { About }/>
             <Route path = '/profile' component = { Profile }/>
             <Route path = '/login' component = { Login }/>
@@ -41,6 +31,7 @@ const App = () => {
             <Route component = { NotFound } />
           </Switch>
       </BrowserRouter>
+                  <Box />
         </div>
     </div>
   );
