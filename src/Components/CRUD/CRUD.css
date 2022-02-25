@@ -1,6 +1,7 @@
 .login-box{
     width: 800px;
     height: 500px;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -21,47 +22,17 @@
     border-radius: 10px;
 }
 
-.css-table {
+.css-read {
   display: flex;
-  justify-content: flex-start;
+  justify-items: space-between;
+  text-align: center;
   align-items: center;
 }
-.add-box { 
-    display: inline-block;
-    justify-content: flex-start;
-}
 
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-.main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #212121;
-  color: whitesmoke;
-  flex-direction: column;
-}
-
-.main-header{
-  font-family: 'Montserrat', sans-serif;
-} */
-
-.create-form label{
-  color: whitesmoke !important;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px !important;
-}
 .login-box1{
-  background: #d1d1d1;
-padding: 10px;
-margin: 0 auto;
-}
-
-.create-css {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+        background: #d1d1d1;
+    padding: 10px;
+    margin: 0 auto;
 }
 
 .login-logo {
@@ -126,6 +97,7 @@ margin: 0 auto;
     letter-spacing: 4px
   }
    
+  
   .login-box a:hover {
     background: #03e9f4;
     color: #fff;
