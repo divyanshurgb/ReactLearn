@@ -16,6 +16,9 @@ const Header = () => {
         <li>
             <Link to = '/Create'> Registration Form </Link>
         </li>
+        <li>
+            <Link to = '/Create'> Registration Form </Link>
+        </li>
     </ul>
         </>
     )

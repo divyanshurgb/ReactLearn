@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Switch} from "react-router-dom"
-import './app.css'
+import './App.css'
 import About from './Pages/About'
 import Profile from './Pages/Profile'
 import NotFound from './Pages/NotFound'
@@ -9,6 +9,8 @@ import MultipleInputs from "./Components/Register/register"
 import Create from "./Components/CRUD/create"
 import Read from "./Components/CRUD/read"
 import Update from "./Components/CRUD/update"
+import DropdownData from './Components/Dropdown/DropdownData';
+import { Select } from '@material-ui/core';
 
 const App = () => {
   // const [login, setLogin] = useState(false);
@@ -18,6 +20,9 @@ const App = () => {
       <div className="main">
       <BrowserRouter>
         <Navbar/> 
+        <Select className="width50" value={this.state.selected} onChange={this.handleChange}>
+             {this.renderOptions()}
+           </Select>
           <Switch>
           {/* <div className="main">
             <h2 className="main-head">React Crud Operations</h2>
@@ -37,6 +42,7 @@ const App = () => {
             <Route path = '/about' component = { About }/>
             <Route path = '/profile' component = { Profile }/>
             <Route path = '/login' component = { Login }/>
+            <Route exact path = '/' component = { DropdownData }/>
             <Route path = "/multipleInputs" component = { MultipleInputs } />
             <Route component = { NotFound } />
           </Switch>
