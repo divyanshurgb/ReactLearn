@@ -14,7 +14,10 @@ const Header = () => {
             <Link to = '/profile'> Profile </Link>
         </li>
         <li>
-            <Link to = '/Create'> Registration Form </Link>
+            <Link to = '/Create'> Form </Link>
+        </li>
+        <li>
+            <Link to = '/dropdowndata'> DropdownData </Link>
         </li>
     </ul>
         </>
